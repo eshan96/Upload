@@ -1,0 +1,12 @@
+<h1>Listing Posts</h1>
+
+<div>
+   <% @posts.each do |post| %>
+      <div> 
+        <%= image_tag post.image.url(:large) %>
+      </div>
+     <% end %> 
+
+</div>
+
+<%= link_to 'New Post', new_post_path %>

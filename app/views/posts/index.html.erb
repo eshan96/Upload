@@ -3,7 +3,9 @@
 <div>
    <% @posts.each do |post| %>
       <div> 
-        <%= image_tag post.image.url(:large) %>
+        <%= post.description%>
+        <%= image_tag post.image.url(:thumb) %>
+        <%= link_to 'Delete', post, method: :delete, data: {confirm: 'Are you sure?'}%>
       </div>
      <% end %> 
 
